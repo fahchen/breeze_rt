@@ -21,7 +21,8 @@ defmodule BreezeRt.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:rustler, "~> 0.30.0"}
+      {:rustler, "~> 0.30.0"},
+      {:thousand_island, "~> 1.0"}
     ]
   end
 end
