@@ -2,5 +2,4 @@
 rustflags = [
     "-C", "link-arg=-undefined",
     "-C", "link-arg=dynamic_lookup",
-    "--cfg", "hyper_unstable_tracing",
 ]
