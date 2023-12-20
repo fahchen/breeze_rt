@@ -1,18 +1,9 @@
 defmodule BreezeRt do
-  @moduledoc """
-  Documentation for `BreezeRt`.
-  """
+  def serve(
+        binary \\ "HEAD / HTTP/1.1\r\nHost: localhost:2137\r\nUser-Agent: curl/8.1.2\r\nAccept: */*\r\n\r\n"
+      ) do
+    channel = BreezeRt.SocketMan.start(self())
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> BreezeRt.hello()
-      :world
-
-  """
-  def hello do
-    :world
+    :ok = BreezeRt.SocketMan.send_message(channel, binary)
   end
 end
